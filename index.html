@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interiors & Designs by Ursula – Ridgefield, CT</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burgundy: #6B2D3E;
+    --burgundy-light: #8B3D52;
+    --gold: #B8956A;
+    --gold-light: #D4AF87;
+    --cream: #FAF7F2;
+    --warm-white: #F5F0E8;
+    --linen: #EDE5D8;
+    --dark: #1C1714;
+    --text: #2E2826;
+    --muted: #9A8F87;
+    --white: #FFFFFF;
+    --border: #DDD5C8;
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--dark);
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 60%, rgba(107,45,62,0.45) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 20%, rgba(184,149,106,0.2) 0%, transparent 50%);
+  }
+  /* Decorative corner ornament */
+  header::after {
+    content: '✦';
+    position: absolute;
+    right: 32px; top: 20px;
+    font-size: 80px;
+    color: rgba(184,149,106,0.08);
+    pointer-events: none;
+    letter-spacing: 20px;
+  }
+  .header-inner {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 52px 40px 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+  .logo-block {}
+  .logo-monogram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px; height: 52px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 14px;
+    letter-spacing: .02em;
+  }
+  .logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(28px, 4vw, 50px);
+    color: var(--white);
+    line-height: 1.05;
+    letter-spacing: .04em;
+  }
+  .logo-name strong {
+    font-weight: 600;
+    color: var(--gold-light);
+    display: block;
+    font-style: italic;
+    font-size: clamp(34px, 5vw, 60px);
+  }
+  .logo-sub {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.35);
+    margin-top: 12px;
+  }
+  .header-right { text-align: right; }
+  .open-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(184,149,106,.3);
+    border-radius: 4px;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+  }
+  .open-dot { width: 7px; height: 7px; border-radius: 50%; background: #86efac; box-shadow: 0 0 6px #86efac; flex-shrink: 0; }
+  .open-text { font-size: 13px; color: rgba(255,255,255,.7); line-height: 1.55; }
+  .open-text strong { color: #fff; display: block; font-weight: 500; }
+  .header-addr { font-size: 13px; color: rgba(255,255,255,.35); margin-top: 6px; }
+
+  /* ── GOLD STRIP ── */
+  .gold-strip {
+    background: var(--burgundy);
+    padding: 14px 28px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: .08em;
+    color: var(--gold-light);
+  }
+  .gold-strip span.sep { color: rgba(184,149,106,.4); margin: 0 14px; }
+
+  /* ── SHARED ── */
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 72px 40px; }
+  .sec-eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .sec-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3.5vw, 46px);
+    font-weight: 300;
+    color: var(--dark);
+    margin-bottom: 12px;
+    line-height: 1.1;
+    letter-spacing: .01em;
+  }
+  .sec-title em { font-style: italic; color: var(--burgundy); }
+  .sec-lead {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 620px;
+    margin-bottom: 44px;
+  }
+  .rule { height: 1px; background: linear-gradient(to right, var(--linen), transparent); margin: 0 40px; }
+
+  /* ── SERVICES ── */
+  .services-bg { background: var(--warm-white); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 16px;
+  }
+  .svc-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 32px 22px 28px;
+    text-align: center;
+    transition: box-shadow .25s, transform .25s;
+    position: relative;
+  }
+  .svc-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 32px; height: 2px;
+    background: var(--gold);
+  }
+  .svc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.07); }
+  .svc-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+  .svc-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 6px;
+    letter-spacing: .02em;
+  }
+  .svc-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; font-weight: 300; }
+
+  /* ── ABOUT / BOUTIQUE ── */
+  .about-bg { background: var(--dark); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  @media(max-width:720px){ .about-grid { grid-template-columns: 1fr; } }
+  .about-bg .sec-title { color: var(--white); }
+  .about-bg .sec-eyebrow { color: var(--gold); }
+  .about-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255,255,255,.75);
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+  .about-body { font-size: 14px; font-weight: 300; color: rgba(255,255,255,.5); line-height: 1.85; }
+  .boutique-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .boutique-tag {
+    border: 1px solid rgba(184,149,106,.25);
+    border-radius: 4px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .boutique-tag .bt-icon { font-size: 22px; display: block; margin-bottom: 6px; }
+  .boutique-tag .bt-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: .04em;
+  }
+
+  /* ── REVIEWS ── */
+  .reviews-bg { background: var(--cream); }
+  .rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    background: var(--burgundy);
+    padding: 28px 36px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .big-score {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--white);
+  }
+  .score-stars { font-size: 22px; color: var(--gold-light); letter-spacing: 3px; }
+  .score-note { font-size: 13px; color: rgba(255,255,255,.55); margin-top: 4px; }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 16px;
+  }
+  .rc {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 26px;
+    position: relative;
+  }
+  .rc::before {
+    content: '\201C';
+    position: absolute;
+    top: 14px; right: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    color: var(--linen);
+    line-height: 1;
+  }
+  .rc-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+  .rc-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--dark);
+    letter-spacing: .02em;
+  }
+  .rc-date { font-size: 11px; color: var(--muted); text-align: right; line-height: 1.5; }
+  .rc-stars { font-size: 13px; color: var(--gold); letter-spacing: 1px; margin-bottom: 10px; }
+  .rc-body { font-size: 13.5px; color: #5a5050; line-height: 1.72; font-weight: 300; }
+
+  /* ── CONTACT ── */
+  .contact-bg { background: var(--warm-white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  @media(max-width:680px){ .contact-grid { grid-template-columns: 1fr; } }
+  .info-list { display: flex; flex-direction: column; gap: 22px; }
+  .info-item { display: flex; gap: 16px; align-items: flex-start; }
+  .ii-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .ii-label { font-size: 10px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .ii-val { font-size: 14.5px; color: var(--dark); line-height: 1.65; font-weight: 400; }
+  .ii-val a { color: var(--burgundy); text-decoration: none; }
+  .ii-val a:hover { text-decoration: underline; }
+  .map-frame { width: 100%; height: 320px; border: 0; display: block; filter: sepia(20%) contrast(1.05); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    padding: 36px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(184,149,106,.2);
+  }
+  .foot-monogram {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px;
+    border: 1px solid rgba(184,149,106,.4);
+    border-radius: 50%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .foot-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255,255,255,.7);
+    letter-spacing: .06em;
+    margin-bottom: 6px;
+  }
+  .foot-name em { font-style: italic; color: var(--gold-light); }
+  footer p { font-size: 12px; color: rgba(255,255,255,.3); }
+
+  @keyframes rise { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }
+  .fade { animation: rise .65s ease both; }
+  .d1{animation-delay:.05s} .d2{animation-delay:.2s}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo-block fade d1">
+      <div class="logo-monogram">U</div>
+      <div class="logo-name">
+        Interiors &amp; Designs
+        <strong>by Ursula</strong>
+      </div>
+      <div class="logo-sub">Interior Design · Boutique · Ridgefield, CT</div>
+    </div>
+    <div class="header-right fade d2">
+      <div class="open-badge">
+        <div class="open-dot"></div>
+        <div class="open-text">
+          <strong>Wed – Sat: 11 AM – 6 PM &nbsp;|&nbsp; Sun: 11 AM – 4 PM</strong>
+          Closed Monday & Tuesday
+        </div>
+      </div>
+      <div class="header-addr">378 Main St, Ridgefield, CT 06877</div>
+      <div class="header-addr" style="color:rgba(255,255,255,.55); margin-top:4px;">📞 203-438-5996</div>
+    </div>
+  </div>
+</header>
+
+<!-- STRIP -->
+<div class="gold-strip">
+  Interior Design<span class="sep">·</span>Home Renovations<span class="sep">·</span>Boutique Shopping<span class="sep">·</span>Holiday Décor<span class="sep">·</span>Gift Giving
+</div>
+
+<!-- SERVICES -->
+<div class="services-bg">
+  <div class="wrap">
+    <p class="sec-eyebrow">What We Offer</p>
+    <h2 class="sec-title">Full-Service Design &amp; <em>Curated Boutique</em></h2>
+    <p class="sec-lead">From complete home transformations to beautifully curated gifts — Interiors & Designs by Ursula is a one-of-a-kind destination in Danbury, CT.</p>
+    <div class="services-grid">
+      <div class="svc-card">
+        <span class="svc-icon">🏠</span>
+        <div class="svc-name">Full Interior Design</div>
+        <div class="svc-desc">Entire home renovations guided by Ursula's expert eye and decades of experience.</div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🍳</span>
+        <div class="svc-name">Kitchen & Bath</div>
+        <div class="svc-desc">Complete kitchen and bathroom renovations tailored to your style and lifestyle.</div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🎨</span>
+        <div class="svc-name">Paint & Flooring</div>
+        <div class="svc-desc">Expert color consultations and flooring selections to transform any space.</div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🛋️</span>
+        <div class="svc-name">Furniture</div>
+        <div class="svc-desc">Handpicked furniture to complement your home's character and your personal taste.</div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">💡</span>
+        <div class="svc-name">Lighting</div>
+        <div class="svc-desc">Lighting design that sets the perfect mood for every room in your home.</div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🪟</span>
+        <div class="svc-name">Window Treatments</div>
+        <div class="svc-desc">Custom window treatments that add elegance and warmth to every space.</div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🎁</span>
+        <div class="svc-name">Gift Boutique</div>
+        <div class="svc-desc">A curated specialty boutique filled with unique gifts for any occasion.</div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon">🎄</span>
+        <div class="svc-name">Holiday Décor</div>
+        <div class="svc-desc">Stunning seasonal and holiday decorations — a must-visit destination every year.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!-- ABOUT -->
+<div class="about-bg">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <p class="sec-eyebrow">About the Studio</p>
+        <h2 class="sec-title">Where Design Meets <em style="color:var(--gold-light)">Warmth</em></h2>
+        <p class="about-text">"Please come in and explore!"</p>
+        <p class="about-body">Interiors & Designs by Ursula is more than a design studio — it's a destination. Ursula brings a rare combination of professional expertise, genuine warmth, and an extraordinary eye for beauty that keeps clients coming back year after year.<br><br>Whether you're planning a full home renovation or simply searching for the perfect gift, you'll find something special here. Ursula takes the time to understand every client's unique vision and brings it to life with care and creativity.</p>
+      </div>
+      <div>
+        <div class="boutique-grid">
+          <div class="boutique-tag">
+            <span class="bt-icon">🪴</span>
+            <div class="bt-name">Home Décor</div>
+          </div>
+          <div class="boutique-tag">
+            <span class="bt-icon">🎀</span>
+            <div class="bt-name">Gift Giving</div>
+          </div>
+          <div class="boutique-tag">
+            <span class="bt-icon">✨</span>
+            <div class="bt-name">Personal Products</div>
+          </div>
+          <div class="boutique-tag">
+            <span class="bt-icon">🕯️</span>
+            <div class="bt-name">Seasonal Finds</div>
+          </div>
+          <div class="boutique-tag">
+            <span class="bt-icon">🌲</span>
+            <div class="bt-name">Holiday Trees</div>
+          </div>
+          <div class="boutique-tag">
+            <span class="bt-icon">🔮</span>
+            <div class="bt-name">Snow Globes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rule" style="background:linear-gradient(to right, #2a2520, transparent); margin:0 40px;"></div>
+
+<!-- REVIEWS -->
+<div class="reviews-bg">
+  <div class="wrap">
+    <p class="sec-eyebrow">Client Reviews</p>
+    <h2 class="sec-title">What Our Clients <em>Say</em></h2>
+
+    <div class="rating-bar">
+      <div class="big-score">5.0</div>
+      <div>
+        <div class="score-stars">★★★★★</div>
+        <div class="score-note">Based on Google Reviews · 378 Main St, Ridgefield CT</div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">Joseph B.</div>
+          <div class="rc-date">6 years ago<br>Local Guide · 12 reviews</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">Just met Ursula for the first time yesterday — she is one of the most genuine, sweetest shop owners I have ever met. She took time to explain everything thoroughly about her designing services and showed us around her beautiful shop.</div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">June Presslaff</div>
+          <div class="rc-date">1 year ago</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">There's always something special to be found and I just love the warmth that Ursula has for all that walk into her shop! Today I was searching for some trees to add to my holiday display and found so many to choose from!</div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">Jessica Bowen</div>
+          <div class="rc-date">1 year ago<br>Local Guide · 15 reviews</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">It was my first time in the store and everything is absolutely gorgeous. Customer service was spot on. They even offered to take all 3 snow globes off their display for me to choose my favorite. I highly recommend shopping here!</div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">Kim Welton</div>
+          <div class="rc-date">1 year ago</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">Traveled all the way from North Carolina to Ursula's to get our Christmas decorations. Beautiful store as always.</div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">Jayme Stevenson</div>
+          <div class="rc-date">1 year ago</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">Interiors & Designs is a "must go" shop for me at the holidays!</div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">Venezia Marble</div>
+          <div class="rc-date">8 years ago</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">Ursula has been a partner of ours for a long time. She does amazing design jobs. It is always a pleasure working with such a professional and experienced team! Highly recommended.</div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">Gabriella Najmy</div>
+          <div class="rc-date">6 years ago<br>Local Guide · 10 reviews</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">I would highly recommend working with Ursula! She is professional, talented, and a complete pleasure to work with. We at Nukitchens have collaborated on many successful projects together over the years and always enjoy working with her.</div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">CJ Bodner</div>
+          <div class="rc-date">1 year ago</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">We come here every year. They have the most beautiful decorations and merchandise! Definitely coming back next year!!!</div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">Eric Emch</div>
+          <div class="rc-date">1 year ago</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">We make a pilgrimage every holiday season for her incredible Christmas décor!</div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">Lori Thesing</div>
+          <div class="rc-date">1 year ago</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">Amazing selection and excellent service! Wonderful staff and so friendly!</div>
+      </div>
+
+      <div class="rc">
+        <div class="rc-head">
+          <div class="rc-name">Brett Haug</div>
+          <div class="rc-date">1 year ago</div>
+        </div>
+        <div class="rc-stars">★★★★★</div>
+        <div class="rc-body">Great items and amazing staff.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<!-- STOREFRONT PHOTO -->
+<div style="background:var(--dark); padding: 0;">
+  <div style="max-width:1140px; margin:0 auto; padding: 64px 40px;">
+    <p class="sec-eyebrow" style="color:var(--gold)">Our Shop</p>
+    <h2 class="sec-title" style="color:var(--white); margin-bottom:28px;">Come Find Us on <em style="color:var(--gold-light)">Main Street</em></h2>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:32px; align-items:center;">
+      <img src="storefront.png" alt="Interiors & Designs by Ursula storefront on Main Street Ridgefield CT"
+        style="width:100%; border-radius:4px; display:block; box-shadow: 0 20px 60px rgba(0,0,0,.5);" />
+      <div>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300; font-style:italic; color:rgba(255,255,255,.8); line-height:1.7; margin-bottom:20px;">
+          "Please come in and explore — there's always something special waiting to be found."
+        </p>
+        <p style="font-size:14px; font-weight:300; color:rgba(255,255,255,.45); line-height:1.85;">
+          Nestled in the heart of Ridgefield's charming Main Street, Interiors & Designs by Ursula is a destination unlike any other. From the moment you step through the door, you'll find a carefully curated world of beauty — from stunning holiday décor to one-of-a-kind gifts and full interior design services.
+        </p>
+        <div style="margin-top:24px; padding-top:24px; border-top:1px solid rgba(184,149,106,.2);">
+          <p style="font-size:13px; color:var(--gold); font-weight:500; letter-spacing:.1em; text-transform:uppercase;">378 Main St, Ridgefield, CT &nbsp;·&nbsp; <a href="tel:2034385996" style="color:var(--gold-light); text-decoration:none;">203-438-5996</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contact-bg">
+  <div class="wrap">
+    <p class="sec-eyebrow">Visit the Studio</p>
+    <h2 class="sec-title">Come In &amp; <em>Explore</em></h2>
+    <div class="contact-grid">
+      <div class="info-list">
+        <div class="info-item">
+          <div class="ii-icon">📍</div>
+          <div>
+            <div class="ii-label">Address</div>
+            <div class="ii-val">378 Main St<br>Ridgefield, CT 06877</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="ii-icon">📞</div>
+          <div>
+            <div class="ii-label">Phone</div>
+            <div class="ii-val"><a href="tel:2034385996">203-438-5996</a></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="ii-icon">🕐</div>
+          <div>
+            <div class="ii-label">Hours</div>
+            <div class="ii-val">Wed – Sat: 11:00 AM – 6:00 PM<br>Sunday: 11:00 AM – 4:00 PM<br>Closed Monday &amp; Tuesday</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="ii-icon">✦</div>
+          <div>
+            <div class="ii-label">Specialties</div>
+            <div class="ii-val">Interior Design · Home Renovation<br>Holiday Décor · Gift Boutique</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="ii-icon">🗺️</div>
+          <div>
+            <div class="ii-label">Directions</div>
+            <div class="ii-val">
+              <a href="https://maps.google.com/?q=378+Main+St,+Ridgefield,+CT+06877" target="_blank">Open in Google Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <iframe class="map-frame"
+        src="https://www.google.com/maps?q=378+Main+St,+Ridgefield,+CT+06877&output=embed"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Interiors & Designs by Ursula"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-monogram">U</div>
+  <div class="foot-name">Interiors &amp; Designs <em>by Ursula</em></div>
+  <p>378 Main St, Ridgefield, CT 06877 &nbsp;·&nbsp; Interior Design · Boutique · Holiday Décor &nbsp;·&nbsp; © 2025</p>
+</footer>
+
+</body>
+</html>
